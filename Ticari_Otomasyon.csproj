@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7D29884-AB58-4647-8DE6-437AE20DE66B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ticari_Otomasyon</RootNamespace>
+    <AssemblyName>Ticari_Otomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v24.1.Core, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v24.1.UI, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v24.1.Core, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v24.1.Core, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v24.1.Core, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v24.1.Drawing, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v24.1.Core, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v24.1.Core, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v24.1.Core, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v24.1.Export, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v24.1.Core, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v24.1.UI, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v24.1.Extensions, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v24.1.UI, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v24.1.Wizard, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v24.1.Core, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v24.1.CodeCompletion, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v24.1.Extensions, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAnasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAnasayfa.Designer.cs">
+      <DependentUpon>FormAnasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAyakkabı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAyakkabı.Designer.cs">
+      <DependentUpon>FormAyakkabı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAyarlar.Designer.cs">
+      <DependentUpon>FormAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBankalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBankalar.Designer.cs">
+      <DependentUpon>FormBankalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormELbise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormELbise.Designer.cs">
+      <DependentUpon>FormELbise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaturalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaturalar.Designer.cs">
+      <DependentUpon>FormFaturalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formfirmaayakkabı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formfirmaayakkabı.Designer.cs">
+      <DependentUpon>Formfirmaayakkabı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormfirmaElbise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormfirmaElbise.Designer.cs">
+      <DependentUpon>FormfirmaElbise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formfirmakaban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formfirmakaban.Designer.cs">
+      <DependentUpon>Formfirmakaban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFirmalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFirmalar.Designer.cs">
+      <DependentUpon>FormFirmalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormfirmaPantolon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormfirmaPantolon.Designer.cs">
+      <DependentUpon>FormfirmaPantolon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiderler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiderler.Designer.cs">
+      <DependentUpon>FormGiderler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHareketler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHareketler.Designer.cs">
+      <DependentUpon>FormHareketler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKaban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKaban.Designer.cs">
+      <DependentUpon>FormKaban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKasa.Designer.cs">
+      <DependentUpon>FormKasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formmüşteriayakkabı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formmüşteriayakkabı.Designer.cs">
+      <DependentUpon>Formmüşteriayakkabı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMüşteriElbise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMüşteriElbise.Designer.cs">
+      <DependentUpon>FormMüşteriElbise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formmüşterikaban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formmüşterikaban.Designer.cs">
+      <DependentUpon>Formmüşterikaban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMüşteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMüşteriler.Designer.cs">
+      <DependentUpon>FormMüşteriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormmüşteriPantolon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormmüşteriPantolon.Designer.cs">
+      <DependentUpon>FormmüşteriPantolon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNotlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotlar.Designer.cs">
+      <DependentUpon>FormNotlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPantolon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPantolon.Designer.cs">
+      <DependentUpon>FormPantolon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPersoneller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPersoneller.Designer.cs">
+      <DependentUpon>FormPersoneller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHızlıErişim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHızlıErişim.Designer.cs">
+      <DependentUpon>FormHızlıErişim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStoklar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStoklar.Designer.cs">
+      <DependentUpon>FormStoklar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormÜrünDüzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormÜrünDüzenleme.Designer.cs">
+      <DependentUpon>FormÜrünDüzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormÜrünler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormÜrünler.Designer.cs">
+      <DependentUpon>FormÜrünler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sqlbaglantisi.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnasayfa.resx">
+      <DependentUpon>FormAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAyakkabı.resx">
+      <DependentUpon>FormAyakkabı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAyarlar.resx">
+      <DependentUpon>FormAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBankalar.resx">
+      <DependentUpon>FormBankalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormELbise.resx">
+      <DependentUpon>FormELbise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaturalar.resx">
+      <DependentUpon>FormFaturalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formfirmaayakkabı.resx">
+      <DependentUpon>Formfirmaayakkabı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormfirmaElbise.resx">
+      <DependentUpon>FormfirmaElbise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formfirmakaban.resx">
+      <DependentUpon>Formfirmakaban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFirmalar.resx">
+      <DependentUpon>FormFirmalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormfirmaPantolon.resx">
+      <DependentUpon>FormfirmaPantolon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiderler.resx">
+      <DependentUpon>FormGiderler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHareketler.resx">
+      <DependentUpon>FormHareketler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKaban.resx">
+      <DependentUpon>FormKaban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKasa.resx">
+      <DependentUpon>FormKasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formmüşteriayakkabı.resx">
+      <DependentUpon>Formmüşteriayakkabı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMüşteriElbise.resx">
+      <DependentUpon>FormMüşteriElbise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formmüşterikaban.resx">
+      <DependentUpon>Formmüşterikaban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMüşteriler.resx">
+      <DependentUpon>FormMüşteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormmüşteriPantolon.resx">
+      <DependentUpon>FormmüşteriPantolon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotlar.resx">
+      <DependentUpon>FormNotlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPantolon.resx">
+      <DependentUpon>FormPantolon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersoneller.resx">
+      <DependentUpon>FormPersoneller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHızlıErişim.resx">
+      <DependentUpon>FormHızlıErişim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStoklar.resx">
+      <DependentUpon>FormStoklar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormÜrünDüzenleme.resx">
+      <DependentUpon>FormÜrünDüzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormÜrünler.resx">
+      <DependentUpon>FormÜrünler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextcomment_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextcomment_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merge_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merge_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usergroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usergroup_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodepartment_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodepartment_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boposition2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boposition2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listbullets_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listbullets_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financial_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financial_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonote_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonote_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\technology_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\technology_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_address.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveall.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listbullets.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coat_480px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coat_480px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\convert_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cleartablestyle_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter-mail-email-doodle-seamless-pattern-good-for-background-backdrop-and-wallpaper-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usergroup_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocustomer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\müşterş_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firma1_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_loading_sign_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\properties_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\properties_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ekran görüntüsü 2025-01-12 163935.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageSolid.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200w.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
